@@ -13,16 +13,6 @@ def read_data(fileName):
     return data_set
 
 
-# def create_neighbors(db, index_to_remove):
-#     return np.concatenate((db[0:index_to_remove], db[index_to_remove+1:]))
-
-
-# def get_neighboring_databases(db):
-#     neighboring_databases = list()
-#     for i in range(len(db)):
-#         ndb = create_neighbors(db, i)
-#         neighboring_databases.append(ndb)
-#     return neighboring_databases
 def laplace_mechanism(count, sensitivity, epsilon):
     beta = sensitivity / epsilon
     noise = np.random.laplace(0, beta, 1)
@@ -113,6 +103,3 @@ if __name__ == "__main__":
     print("Private Max Response for Age")
     print("Age Range With Highest Population = ", report_noisy_max(
         data[:, 0], [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], epsilon))
-
-
-# since the histogram is a parelal com the number of bins will only incress the propalty to gite the maximum noise
