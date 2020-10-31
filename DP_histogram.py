@@ -97,7 +97,6 @@ if __name__ == "__main__":
     # the original Histogram and DP Histogram for Income(K)
     print("Income(K) original Histogram")
     hist, bins = np.histogram(
-        # data[:, 2], bins=[0, 500,  1000])
         data[:, 2], bins=[0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000])
     print(hist)
     print(bins)
@@ -116,5 +115,4 @@ if __name__ == "__main__":
         data[:, 0], [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100], epsilon))
 
 
-# 1222
 # since the histogram is a parelal com the number of bins will only incress the propalty to gite the maximum noise
